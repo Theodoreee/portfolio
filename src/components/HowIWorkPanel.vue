@@ -1,0 +1,282 @@
+<template>
+    <section class="how-i-work-panel">
+        <div class="panel-container">
+            <div class="left-content">
+                <div class="content">
+                    <h3>mes services</h3>
+                    <h2>Créations de miniatures impactantes et personnalisées !</h2>
+                    <p>
+                        Je vous propose de créer pour vous une miniature impactante et personnalisée pour votre chaîne
+                        YouTube. Cela vous permettra de vous professionnaliser et de toucher une plus large audience !
+                    </p>
+                </div>
+            </div>
+            <div class="right-content">
+                <ul>
+                    <li ref="listItem1">Discussion autour du projet</li>
+                    <li ref="listItem2">Création de prototypes</li>
+                    <li ref="listItem3">Révisions basées sur les retours</li>
+                    <li ref="listItem4">Livraison et suivi post-projet</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="button-container">
+        <button @click="goToContact" class="contact-button">CONTACT</button>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "HowIWorkPanel",
+    mounted() {
+        // On définit les références des éléments à observer
+        const listItems = [this.$refs.listItem1, this.$refs.listItem2, this.$refs.listItem3, this.$refs.listItem4];
+
+        // Crée un observateur pour détecter lorsque chaque élément devient visible
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {  // Retirer `index` puisque nous ne l'utilisons pas
+                    // Si l'élément est visible
+                    if (entry.isIntersecting) {
+                        // On applique l'animation uniquement lorsque l'élément devient visible
+                        entry.target.classList.add('animate');
+                    }
+                });
+            },
+            { threshold: 0.5 } // L'élément doit être visible à 50% pour déclencher l'animation
+        );
+
+        // On commence à observer chaque élément
+        listItems.forEach((item) => observer.observe(item));
+    },
+    methods: {
+        goToContact() {
+            this.$router.push("/contact");
+        }
+    },
+};
+</script>
+
+<style scoped>
+.how-i-work-panel {
+    font-family: "blastered";
+    text-transform: uppercase;
+    margin: 1rem auto;
+    background-color: #3b373b;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 90%;
+}
+
+.panel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    margin-left: 4em;
+}
+
+.left-content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-content h3 {
+    text-transform: lowercase;
+    font-size: 1.6em;
+    color: #E0B0FF;
+}
+
+.left-content h2 {
+    font-size: 4rem;
+    color: #E0B0FF;
+}
+
+.left-content p {
+    font-size: 1.6rem;
+    color: #E0B0FF;
+    line-height: 1.6;
+    letter-spacing: 2px;
+}
+
+.right-content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.right-content li {
+    font-size: 4rem;
+    color: #E0B0FF;
+    margin-bottom: 1rem;
+    opacity: 0;
+    /* Initialement caché pour l'animation */
+    transform: translateX(0);
+    /* Initialement centré */
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    /* Garder l'animation une fois terminée */
+}
+
+.right-content li::before {
+    content: "• ";
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.right-content li.animate:nth-child(odd) {
+    animation-name: slide-from-right;
+}
+
+.right-content li.animate:nth-child(even) {
+    animation-name: slide-from-left;
+}
+
+@keyframes slide-from-right {
+    0% {
+        transform: translateX(100%);
+        /* Départ de la droite */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Arrivée à la position initiale */
+        opacity: 1;
+    }
+}
+
+@keyframes slide-from-left {
+    0% {
+        transform: translateX(-100%);
+        /* Départ de la gauche */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Arrivée à la position initiale */
+        opacity: 1;
+    }
+}
+
+/* Supprimer la marge du dernier élément de la liste */
+.right-content li:last-child {
+    margin-bottom: 0;
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.contact-button {
+    font-family: "blastered";
+    background-color: #E0B0FF;
+    color: #242124;
+    font-size: 2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Ajout de la transition pour le zoom */
+    margin-top: 2em;
+}
+
+.contact-button:hover {
+    background-color: #b590d0;
+    /* Couleur un peu plus foncée */
+    transform: scale(1.1);
+    /* Zoom léger */
+}
+
+/* Responsiveness */
+
+/* Pour les tablettes */
+@media (max-width: 768px) {
+    .how-i-work-panel {
+        width: 95%;
+        /* Augmente la largeur pour mieux utiliser l'espace */
+        margin: 1rem;
+    }
+
+    .panel-container {
+        flex-direction: column;
+        /* Change la disposition en colonne */
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+        /* Utilise toute la largeur disponible */
+        margin: 1rem 0;
+        /* Ajoute un espacement entre les sections */
+    }
+
+    .left-content h2 {
+        font-size: 3rem;
+        /* Réduit la taille du titre */
+    }
+
+    .right-content ul {
+        text-align: center;
+        /* Centre les éléments de la liste */
+    }
+
+    .right-content li {
+        font-size: 3rem;
+        /* Réduit la taille de la police */
+    }
+
+    .contact-button {
+        font-size: 1.8rem;
+        /* Réduit la taille du bouton */
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Pour les téléphones */
+@media (max-width: 480px) {
+    .how-i-work-panel {
+        padding: 1rem;
+        /* Réduit le padding pour les petits écrans */
+        margin: 0.5rem auto;
+        /* Ajuste la marge */
+    }
+
+    .left-content h2 {
+        font-size: 2.5rem;
+        /* Réduction supplémentaire pour le titre */
+    }
+
+    .left-content p {
+        font-size: 1.4rem;
+        /* Réduit la taille de la description */
+        line-height: 1.4;
+        /* Ajuste l'interligne */
+    }
+
+    .right-content li {
+        font-size: 2.5rem;
+        /* Réduit la taille de la liste */
+    }
+
+    .contact-button {
+        font-size: 1.6rem;
+        /* Réduit encore la taille du bouton */
+        padding: 0.5rem 1.2rem;
+    }
+}
+</style>
