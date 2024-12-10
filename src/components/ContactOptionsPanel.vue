@@ -177,7 +177,6 @@ export default {
     }
 }
 
-/* Pour les téléphones */
 @media (max-width: 480px) {
     .contact-options-panel {
         padding: 1.5rem;
@@ -190,9 +189,14 @@ export default {
     }
 
     .contact-list {
-        flex-direction: column;
-        /* Options empilées verticalement */
-        gap: 20px;
+        flex-direction: row;
+        /* Garde les options alignées horizontalement */
+        flex-wrap: wrap;
+        /* Permet un retour à la ligne si l'espace est insuffisant */
+        justify-content: center;
+        /* Centre les éléments */
+        gap: 10px;
+        /* Ajuste l'espacement entre les options */
     }
 
     .contact-list a {

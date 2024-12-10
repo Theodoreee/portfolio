@@ -104,7 +104,6 @@ export default {
     }
 }
 
-/* Media query pour les téléphones */
 @media (max-width: 480px) {
     .header {
         padding: 1.5rem 1rem;
@@ -112,10 +111,14 @@ export default {
     }
 
     .nav-list {
-        flex-direction: column;
-        /* Empile les liens verticalement */
-        gap: 1.5rem;
-        /* Ajoute un espacement vertical entre les liens */
+        flex-direction: row;
+        /* Assure un alignement horizontal */
+        flex-wrap: wrap;
+        /* Permet de passer à la ligne suivante si nécessaire */
+        justify-content: center;
+        /* Centrer les éléments horizontalement */
+        gap: 1rem;
+        /* Réduit l'espacement entre les éléments */
     }
 
     .nav-link {

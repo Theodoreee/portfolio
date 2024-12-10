@@ -20,10 +20,10 @@ export default {
     data() {
         return {
             creations: [
-                { title: "Création 1", image: require("@/assets/combattant_ia-v6.png") },
-                { title: "Création 2", image: require("@/assets/aaron2-v2.png") },
-                { title: "Création 3", image: require("@/assets/activision2-final.png") },
-                { title: "Création 4", image: require("@/assets/formule-final.png") },
+                { title: "Création 1", image: require("@/assets/combattant_ia-v6-min.png") },
+                { title: "Création 2", image: require("@/assets/aaron2-v2-min.png") },
+                { title: "Création 3", image: require("@/assets/activision2-final-min.png") },
+                { title: "Création 4", image: require("@/assets/formule-final-min.png") },
                 // Ajoutez autant de créations que vous en avez
             ],
             isVisible: []
