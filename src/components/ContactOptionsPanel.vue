@@ -18,19 +18,20 @@
 
         <ul class="contact-list">
             <li>
-                <a href="mailto:your-email@example.com" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:cl3o.contact@gmail.com" target="_blank" rel="noopener noreferrer">
                     <img src="../../public/gmail.png" alt="Email" class="icon" />
                     Par Email
                 </a>
             </li>
             <li>
-                <a href="https://discord.com/users/your-discord-id" target="_blank" rel="noopener noreferrer">
+                <a href="https://discord.gg/MMcCAuhTNg" target="_blank" rel="noopener noreferrer">
                     <img src="../../public/discord.png" alt="Discord" class="icon" />
                     Sur Discord
                 </a>
             </li>
             <li>
-                <a href="https://instagram.com/your-instagram-handle" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/cl3oyt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank" rel="noopener noreferrer">
                     <img src="../../public/instagram.png" alt="Instagram" class="icon" />
                     Sur Instagram
                 </a>
