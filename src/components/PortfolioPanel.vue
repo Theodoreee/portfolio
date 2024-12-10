@@ -5,6 +5,7 @@
             <div class="creation-card" v-for="(creation, index) in creations" :key="index" ref="creationCards"
                 :class="{ 'fade-in': isVisible[index] }">
                 <img :src="creation.image" :alt="creation.title" class="creation-image" />
+                <div class="image-overlay"></div>
             </div>
         </div>
         <!-- Bouton ajouté en dessous des créations -->
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+
 export default {
     name: "CreationsPanel",
     data() {
@@ -34,6 +36,7 @@ export default {
     },
     mounted() {
         this.observeCreations();
+        this.addGlobalEventListeners();
     },
     methods: {
         goToContact() {
@@ -52,7 +55,6 @@ export default {
             });
             this.isVisible = new Array(this.creations.length).fill(false);
         },
-
         observeCreations() {
             const options = {
                 root: null, // Utilise la fenêtre du navigateur
@@ -71,6 +73,21 @@ export default {
 
             this.$refs.creationCards.forEach(card => {
                 observer.observe(card);
+            });
+        },
+        addGlobalEventListeners() {
+            // Désactiver le clic droit sur les images
+            document.addEventListener('contextmenu', (e) => {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                }
+            });
+
+            // Désactiver les raccourcis clavier (Ctrl+S, Ctrl+U)
+            document.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u')) {
+                    e.preventDefault();
+                }
             });
         }
     }
@@ -113,7 +130,7 @@ export default {
 }
 
 .creation-card {
-    background-color: white;
+    background-color: transparent;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -139,9 +156,26 @@ export default {
 }
 
 .creation-image {
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 10;
 }
 
 /* Style pour le bouton */
