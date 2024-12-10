@@ -202,81 +202,97 @@ export default {
     /* Zoom léger */
 }
 
-/* Responsiveness */
-
 /* Pour les tablettes */
 @media (max-width: 768px) {
-    .how-i-work-panel {
-        width: 95%;
-        /* Augmente la largeur pour mieux utiliser l'espace */
-        margin: 1rem;
-    }
-
     .panel-container {
         flex-direction: column;
-        /* Change la disposition en colonne */
+        align-items: center;
+        text-align: center;
     }
 
     .left-content,
     .right-content {
         width: 100%;
-        /* Utilise toute la largeur disponible */
         margin: 1rem 0;
-        /* Ajoute un espacement entre les sections */
+        text-align: center;
+        /* Centrer le contenu textuel */
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -3.5em;
+        /* Centre horizontalement le contenu */
     }
 
     .left-content h2 {
-        font-size: 3rem;
-        /* Réduit la taille du titre */
+        font-size: 2.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .left-content p {
+        font-size: 1.5rem;
+        line-height: 1.6;
     }
 
     .right-content ul {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
         text-align: center;
-        /* Centre les éléments de la liste */
     }
 
     .right-content li {
-        font-size: 3rem;
-        /* Réduit la taille de la police */
-    }
-
-    .contact-button {
-        font-size: 1.8rem;
-        /* Réduit la taille du bouton */
-        padding: 0.6rem 1.5rem;
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
     }
 }
 
 /* Pour les téléphones */
 @media (max-width: 480px) {
-    .how-i-work-panel {
-        padding: 1rem;
-        /* Réduit le padding pour les petits écrans */
-        margin: 0.5rem auto;
-        /* Ajuste la marge */
+    .panel-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+        /* Centre le contenu textuel */
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -3.5em;
+        /* Centre horizontalement le contenu */
     }
 
     .left-content h2 {
-        font-size: 2.5rem;
-        /* Réduction supplémentaire pour le titre */
+        font-size: 2.4rem;
+        margin-bottom: 0.8rem;
     }
 
     .left-content p {
-        font-size: 1.4rem;
-        /* Réduit la taille de la description */
+        font-size: 1.3rem;
         line-height: 1.4;
-        /* Ajuste l'interligne */
+    }
+
+    .right-content ul {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
     }
 
     .right-content li {
-        font-size: 2.5rem;
-        /* Réduit la taille de la liste */
-    }
-
-    .contact-button {
-        font-size: 1.6rem;
-        /* Réduit encore la taille du bouton */
-        padding: 0.5rem 1.2rem;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
     }
 }
 </style>
