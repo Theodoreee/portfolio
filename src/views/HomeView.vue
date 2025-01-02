@@ -15,7 +15,6 @@ import HowIWorkPanel from "@/components/HowIWorkPanel.vue";
 import NichesPanel from "@/components/NichesPanel.vue";
 import FooterPanel from "@/components/FooterPanel.vue";
 
-
 export default {
     name: "HomeView",
     components: {

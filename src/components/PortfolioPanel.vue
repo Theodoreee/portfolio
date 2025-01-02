@@ -45,7 +45,7 @@ export default {
 
         // Fonction pour charger automatiquement les créations
         loadCreations() {
-            const context = require.context('@/assets', false, /\.(png|jpe?g|gif)$/); // Cible les fichiers d'images dans le dossier assets
+            const context = require.context('@/assets', false, /\.(png)$/); // Cible les fichiers d'images dans le dossier assets
             const images = context.keys(); // Récupère les clés des fichiers dans le dossier
             this.creations = images.map(image => {
                 return {
