@@ -15,7 +15,6 @@
                 <div class="divider" :style="{ left: `${dividerPosition}px` }"></div>
             </div>
         </div>
-        <!-- Bouton ajouté en dessous des créations -->
         <div class="button-container">
             <button @click="goToPortfolio" class="portfolio-button">VOIR LE PORTFOLIO</button>
         </div>
@@ -44,7 +43,6 @@ export default {
     },
     methods: {
         goToPortfolio() {
-            // Redirection vers la page portfolio
             this.$router.push("/portfolio");
         },
         handleMouseMove(event) {
@@ -52,13 +50,11 @@ export default {
             const rect = container.getBoundingClientRect();
             this.containerWidth = rect.width;
 
-            // Limiter le diviseur entre 0 et la largeur du conteneur
             const mouseX = event.clientX - rect.left;
             this.dividerPosition = Math.max(0, Math.min(mouseX, this.containerWidth));
         }
     },
     mounted() {
-        // Set initial position to the center
         const container = this.$el.querySelector(".image-wrapper");
         this.containerWidth = container.offsetWidth;
         this.dividerPosition = this.containerWidth / 2;
@@ -74,10 +70,8 @@ export default {
     margin: 0 auto;
     position: relative;
     height: auto;
-    /* Ajuste automatiquement à la hauteur du contenu */
     margin-bottom: 2rem;
     overflow: hidden;
-    /* Coupe tout débordement */
 }
 
 .image-wrapper {
@@ -85,9 +79,7 @@ export default {
     width: 100%;
     height: 440px;
     overflow: hidden;
-    /* Cache les parties des images qui dépassent */
     border-radius: 20px;
-    /* Coins arrondis */
 }
 
 .image {
@@ -97,11 +89,9 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Les images remplissent le conteneur sans déborder */
     clip-path: inset(0 0 0 0);
     transition: none;
     border-radius: 20px;
-    /* Coins arrondis appliqués aux images */
 }
 
 .divider {
@@ -173,7 +163,6 @@ export default {
     object-fit: cover;
 }
 
-/* Style pour le bouton */
 .button-container {
     text-align: center;
     margin-top: 2rem;
@@ -189,16 +178,13 @@ export default {
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Ajout de la transition pour le zoom */
     margin-top: 1.3em;
     margin-bottom: 1em;
 }
 
 .portfolio-button:hover {
     background-color: #b590d0;
-    /* Couleur un peu plus foncée */
     transform: scale(1.1);
-    /* Zoom léger */
 }
 
 .creations-grid {
@@ -221,7 +207,6 @@ export default {
 
     .image-wrapper {
         height: 360px;
-        /* Réduction de la hauteur */
     }
 
     .portfolio-button {
@@ -230,7 +215,6 @@ export default {
     }
 }
 
-/* Adaptation pour téléphones */
 @media (max-width: 768px) {
     .creations-panel {
         padding: 1.5rem;
@@ -253,7 +237,6 @@ export default {
 
     .image-wrapper {
         height: 300px;
-        /* Hauteur encore réduite */
     }
 
     .portfolio-button {
@@ -262,7 +245,6 @@ export default {
     }
 }
 
-/* Adaptation pour petits téléphones */
 @media (max-width: 480px) {
 
     .creations-title-1,

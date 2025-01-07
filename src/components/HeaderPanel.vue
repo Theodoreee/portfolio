@@ -91,39 +91,30 @@ export default {
     width: 100%;
 }
 
-/* Media query pour les tablettes */
 @media (max-width: 768px) {
     .header {
         padding: 2rem 1.5rem;
-        /* Réduit le padding */
     }
 
     .nav-link {
         font-size: 1.5rem;
-        /* Réduit davantage la taille des liens */
     }
 }
 
 @media (max-width: 480px) {
     .header {
         padding: 1.5rem 1rem;
-        /* Réduction plus importante du padding */
     }
 
     .nav-list {
         flex-direction: row;
-        /* Assure un alignement horizontal */
         flex-wrap: wrap;
-        /* Permet de passer à la ligne suivante si nécessaire */
         justify-content: center;
-        /* Centrer les éléments horizontalement */
         gap: 1rem;
-        /* Réduit l'espacement entre les éléments */
     }
 
     .nav-link {
         font-size: 1.3rem;
-        /* Taille encore plus réduite pour les petits écrans */
     }
 }
 </style>

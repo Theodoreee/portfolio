@@ -1,7 +1,6 @@
 <template>
     <section class="niches-page">
         <div class="niches-container">
-            <!-- Texte à gauche -->
             <div class="text-left">
                 <h2>Les niches dans lesquelles je suis à l'aise</h2>
                 <p>
@@ -10,7 +9,6 @@
                 </p>
             </div>
 
-            <!-- Bulles flottantes à droite -->
             <div class="bubbles-right">
                 <div class="bubble bubble-1">Business</div>
                 <div class="bubble bubble-2">Divertissement</div>
@@ -152,69 +150,50 @@ export default {
     }
 }
 
-/* Responsiveness */
 
-/* Pour les tablettes */
 @media (max-width: 768px) {
     .niches-container {
         flex-direction: column;
-        /* Change la disposition en colonne */
         align-items: center;
-        /* Centre les éléments */
         text-align: center;
-        /* Centre le texte */
     }
 
     .text-left {
         width: 100%;
-        /* Utilise toute la largeur */
         margin-bottom: 2rem;
-        /* Ajoute un espacement avec les bulles */
     }
 
     .bubbles-right {
         width: 100%;
-        /* Utilise toute la largeur */
         height: 400px;
-        /* Augmente la hauteur pour plus de bulles visibles */
     }
 
     .bubble {
         width: 140px;
-        /* Réduit la taille des bulles */
         height: 140px;
         font-size: 1.8rem;
-        /* Réduit la taille de la police */
     }
 }
 
-/* Pour les téléphones */
 @media (max-width: 480px) {
     .text-left h2 {
         font-size: 2.2rem;
-        /* Réduit la taille du titre */
     }
 
     .text-left p {
         font-size: 1.3rem;
-        /* Réduit la taille du texte */
         line-height: 1.4;
-        /* Ajuste l'interligne */
         letter-spacing: 2px;
-        /* Réduit l'espacement entre les lettres */
     }
 
     .bubbles-right {
         height: 300px;
-        /* Réduit encore la hauteur */
     }
 
     .bubble {
         width: 120px;
-        /* Taille plus petite pour les bulles */
         height: 120px;
         font-size: 1.5rem;
-        /* Réduction supplémentaire de la taille de police */
     }
 }
 </style>

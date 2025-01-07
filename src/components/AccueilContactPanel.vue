@@ -8,7 +8,6 @@
             </p>
         </div>
         <div class="contact-image">
-            <!-- L'image est ajoutée ici en tant que background -->
         </div>
     </section>
 </template>
@@ -81,51 +80,41 @@ export default {
     .contact-panel {
         padding: 2rem;
         min-height: 500px;
-        /* Réduit la hauteur minimale */
     }
 
     .content-container {
         max-width: 80%;
-        /* Augmente la largeur pour plus de lisibilité */
     }
 
     .content-container h1 {
         font-size: 3.5rem;
-        /* Réduit la taille du titre */
     }
 
     .content-container p {
         font-size: 1.5rem;
-        /* Réduit la taille du texte */
     }
 
     .contact-image {
         height: 800px;
-        /* Réduit la hauteur de l'image pour tablettes */
     }
 }
 
-/* Pour les téléphones */
 @media (max-width: 480px) {
     .contact-panel {
         padding: 1.5rem;
         min-height: 400px;
-        /* Réduit davantage la hauteur minimale */
     }
 
     .content-container h1 {
         font-size: 2.5rem;
-        /* Réduit encore la taille du titre */
     }
 
     .content-container p {
         font-size: 1.2rem;
-        /* Réduit la taille du texte */
     }
 
     .contact-image {
         height: 600px;
-        /* Réduit la hauteur de l'image */
     }
 }
 </style>

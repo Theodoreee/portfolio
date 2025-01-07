@@ -51,8 +51,6 @@ export default {
 };
 </script>
 
-
-
 <style scoped>
 .reviews-panel {
     font-family: "blastered";
@@ -140,15 +138,12 @@ export default {
 
 .arrow.left {
     left: -2rem;
-    /* Flèche complètement à l'extérieur */
 }
 
 .arrow.right {
     right: -2rem;
-    /* Flèche complètement à l'extérieur */
 }
 
-/* Transition CSS */
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.5s ease-in-out;
@@ -189,7 +184,6 @@ export default {
     }
 }
 
-/* Pour les téléphones */
 @media (max-width: 480px) {
     .reviews-panel {
         padding: 1.5rem;

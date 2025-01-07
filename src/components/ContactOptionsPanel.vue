@@ -131,9 +131,7 @@ export default {
     margin: 0 auto;
 }
 
-/* Responsiveness */
 
-/* Pour les tablettes */
 @media (max-width: 768px) {
     .contact-options-panel {
         padding: 2rem;
@@ -146,35 +144,28 @@ export default {
 
     .contact-list {
         gap: 40px;
-        /* Réduit l'espacement entre les options */
     }
 
     .contact-list a {
         font-size: 2.5rem;
-        /* Réduction de la taille des liens */
     }
 
     .icon {
         width: 40px;
         height: 40px;
-        /* Taille réduite des icônes */
     }
 
     .how-i-work-panel {
         width: 90%;
-        /* Augmente la largeur disponible */
     }
 
     .content h3 {
         font-size: 3.2rem;
-        /* Taille du sous-titre ajustée */
     }
 
     .content p {
         font-size: 1.4rem;
-        /* Réduction de la taille du texte */
         line-height: 1.5;
-        /* Ajustement de l'interligne */
     }
 }
 
@@ -185,47 +176,36 @@ export default {
 
     .contact-options-panel h2 {
         font-size: 2.5rem;
-        /* Réduction supplémentaire de la taille du titre */
         letter-spacing: 2px;
     }
 
     .contact-list {
         flex-direction: row;
-        /* Garde les options alignées horizontalement */
         flex-wrap: wrap;
-        /* Permet un retour à la ligne si l'espace est insuffisant */
         justify-content: center;
-        /* Centre les éléments */
         gap: 10px;
-        /* Ajuste l'espacement entre les options */
     }
 
     .contact-list a {
         font-size: 2rem;
-        /* Taille encore réduite pour les liens */
     }
 
     .icon {
         width: 30px;
         height: 30px;
-        /* Taille plus petite pour les icônes */
     }
 
     .how-i-work-panel {
         width: 95%;
-        /* Prend presque toute la largeur de l’écran */
     }
 
     .content h3 {
         font-size: 2.8rem;
-        /* Taille du sous-titre réduite pour les petits écrans */
     }
 
     .content p {
         font-size: 1.2rem;
-        /* Réduction supplémentaire pour le texte */
         line-height: 1.4;
-        /* Interligne ajustée */
         letter-spacing: 1.5px;
     }
 }

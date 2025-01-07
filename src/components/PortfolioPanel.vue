@@ -8,7 +8,6 @@
                 <div class="image-overlay"></div>
             </div>
         </div>
-        <!-- Bouton ajouté en dessous des créations -->
         <div class="button-container">
             <button @click="goToContact" class="portfolio-button">CONTACT</button>
         </div>
@@ -26,7 +25,6 @@ export default {
                 { title: "Création 2", image: require("@/assets/aaron2-v2-min.png") },
                 { title: "Création 3", image: require("@/assets/activision2-final-min.png") },
                 { title: "Création 4", image: require("@/assets/formule-final-min.png") },
-                // Ajoutez autant de créations que vous en avez
             ],
             isVisible: []
         };
@@ -43,13 +41,12 @@ export default {
             this.$router.push("/contact");
         },
 
-        // Fonction pour charger automatiquement les créations
         loadCreations() {
-            const context = require.context('@/assets', false, /\.(png)$/); // Cible les fichiers d'images dans le dossier assets
-            const images = context.keys(); // Récupère les clés des fichiers dans le dossier
+            const context = require.context('@/assets', false, /\.(png)$/);
+            const images = context.keys();
             this.creations = images.map(image => {
                 return {
-                    title: image.split('/').pop().replace(/\.\w+$/, ''), // Utilise le nom du fichier sans l'extension comme titre
+                    title: image.split('/').pop().replace(/\.\w+$/, ''),
                     image: context(image),
                 };
             });
@@ -57,16 +54,16 @@ export default {
         },
         observeCreations() {
             const options = {
-                root: null, // Utilise la fenêtre du navigateur
+                root: null,
                 rootMargin: '0px',
-                threshold: 0.5 // Déclenche l'événement lorsque 50% de l'élément est visible
+                threshold: 0.5
             };
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     const index = Array.from(this.$refs.creationCards).indexOf(entry.target);
                     if (entry.isIntersecting) {
-                        this.isVisible[index] = true; // Directement modifier l'indice de isVisible
+                        this.isVisible[index] = true;
                     }
                 });
             }, options);
@@ -76,14 +73,12 @@ export default {
             });
         },
         addGlobalEventListeners() {
-            // Désactiver le clic droit sur les images
             document.addEventListener('contextmenu', (e) => {
                 if (e.target.tagName === 'IMG') {
                     e.preventDefault();
                 }
             });
 
-            // Désactiver les raccourcis clavier (Ctrl+S, Ctrl+U)
             document.addEventListener('keydown', (e) => {
                 if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u')) {
                     e.preventDefault();
@@ -124,9 +119,7 @@ export default {
 .creations-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 images par ligne */
     gap: 3rem;
-    /* Espace entre les images */
 }
 
 .creation-card {
@@ -136,18 +129,13 @@ export default {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
-    /* Commence en transparent */
     transform: translateY(50px);
-    /* Commence légèrement décalé vers le bas */
     transition: opacity 1s ease, transform 1s ease;
-    /* Durée de l'animation */
 }
 
 .creation-card.fade-in {
     opacity: 1;
-    /* Devient visible */
     transform: translateY(0);
-    /* Remontée à sa position initiale */
 }
 
 .creation-card:hover {
@@ -178,7 +166,6 @@ export default {
     z-index: 10;
 }
 
-/* Style pour le bouton */
 .button-container {
     text-align: center;
     margin-top: 2rem;
@@ -206,18 +193,15 @@ export default {
 @media (max-width: 768px) {
     .creations-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 images par ligne sur des écrans plus petits */
     }
 }
 
 @media (max-width: 480px) {
     .creations-grid {
         grid-template-columns: 1fr;
-        /* 1 image par ligne sur des écrans très petits */
     }
 }
 
-/* Pour les tablettes */
 @media (max-width: 768px) {
     .creations-panel {
         padding: 2rem;
@@ -225,31 +209,25 @@ export default {
 
     .creations-title {
         font-size: 3rem;
-        /* Taille du titre ajustée */
         letter-spacing: 4px;
     }
 
     .creations-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 images par ligne */
         gap: 2rem;
-        /* Espacement réduit */
     }
 
     .creation-card {
         transform: translateY(30px);
-        /* Ajuste la position initiale pour l'animation */
         transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
     .portfolio-button {
         font-size: 1.8rem;
         padding: 0.6rem 1.5rem;
-        /* Taille du bouton ajustée */
     }
 }
 
-/* Pour les téléphones */
 @media (max-width: 480px) {
     .creations-panel {
         padding: 1.5rem;
@@ -257,27 +235,22 @@ export default {
 
     .creations-title {
         font-size: 2.5rem;
-        /* Taille du titre encore réduite */
         letter-spacing: 3px;
     }
 
     .creations-grid {
         grid-template-columns: 1fr;
-        /* 1 image par ligne */
         gap: 1.5rem;
-        /* Espacement encore réduit */
     }
 
     .creation-card {
         transform: translateY(20px);
-        /* Ajuste encore la position initiale pour l'animation */
         transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .portfolio-button {
         font-size: 1.5rem;
         padding: 0.5rem 1.2rem;
-        /* Taille du bouton encore réduite */
     }
 }
 </style>

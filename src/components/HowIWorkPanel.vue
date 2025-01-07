@@ -30,24 +30,19 @@
 export default {
     name: "HowIWorkPanel",
     mounted() {
-        // On définit les références des éléments à observer
         const listItems = [this.$refs.listItem1, this.$refs.listItem2, this.$refs.listItem3, this.$refs.listItem4];
 
-        // Crée un observateur pour détecter lorsque chaque élément devient visible
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach((entry) => {  // Retirer `index` puisque nous ne l'utilisons pas
-                    // Si l'élément est visible
+                entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // On applique l'animation uniquement lorsque l'élément devient visible
                         entry.target.classList.add('animate');
                     }
                 });
             },
-            { threshold: 0.5 } // L'élément doit être visible à 50% pour déclencher l'animation
+            { threshold: 0.5 }
         );
 
-        // On commence à observer chaque élément
         listItems.forEach((item) => observer.observe(item));
     },
     methods: {
@@ -121,12 +116,9 @@ export default {
     color: #E0B0FF;
     margin-bottom: 1rem;
     opacity: 0;
-    /* Initialement caché pour l'animation */
     transform: translateX(0);
-    /* Initialement centré */
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    /* Garder l'animation une fois terminée */
 }
 
 .right-content li::before {
@@ -146,13 +138,11 @@ export default {
 @keyframes slide-from-right {
     0% {
         transform: translateX(100%);
-        /* Départ de la droite */
         opacity: 0;
     }
 
     100% {
         transform: translateX(0);
-        /* Arrivée à la position initiale */
         opacity: 1;
     }
 }
@@ -160,18 +150,15 @@ export default {
 @keyframes slide-from-left {
     0% {
         transform: translateX(-100%);
-        /* Départ de la gauche */
         opacity: 0;
     }
 
     100% {
         transform: translateX(0);
-        /* Arrivée à la position initiale */
         opacity: 1;
     }
 }
 
-/* Supprimer la marge du dernier élément de la liste */
 .right-content li:last-child {
     margin-bottom: 0;
 }
@@ -191,18 +178,14 @@ export default {
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Ajout de la transition pour le zoom */
     margin-top: 2em;
 }
 
 .contact-button:hover {
     background-color: #b590d0;
-    /* Couleur un peu plus foncée */
     transform: scale(1.1);
-    /* Zoom léger */
 }
 
-/* Pour les tablettes */
 @media (max-width: 768px) {
     .panel-container {
         flex-direction: column;
@@ -215,7 +198,6 @@ export default {
         width: 100%;
         margin: 1rem 0;
         text-align: center;
-        /* Centrer le contenu textuel */
     }
 
     .left-content {
@@ -223,7 +205,6 @@ export default {
         flex-direction: column;
         align-items: center;
         margin-left: -3.5em;
-        /* Centre horizontalement le contenu */
     }
 
     .left-content h2 {
@@ -249,7 +230,6 @@ export default {
     }
 }
 
-/* Pour les téléphones */
 @media (max-width: 480px) {
     .panel-container {
         flex-direction: column;
@@ -262,7 +242,6 @@ export default {
         width: 100%;
         margin: 1rem 0;
         text-align: center;
-        /* Centre le contenu textuel */
     }
 
     .left-content {
@@ -270,7 +249,6 @@ export default {
         flex-direction: column;
         align-items: center;
         margin-left: -3.5em;
-        /* Centre horizontalement le contenu */
     }
 
     .left-content h2 {

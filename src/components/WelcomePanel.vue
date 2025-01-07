@@ -5,7 +5,6 @@
             <p>Découvrez mes créations uniques et mes collaborations avec de nombreux Youtubeurs !</p>
         </div>
         <div class="welcome-image">
-            <!-- L'image est ajoutée ici en tant que background -->
         </div>
     </section>
 </template>
@@ -46,7 +45,6 @@ export default {
 }
 
 .welcome-text h1 {
-    /* font-family: "Chewy", system-ui; */
     font-size: 6rem;
     margin-bottom: 1rem;
 }
@@ -72,68 +70,51 @@ export default {
     opacity: 0.3;
 }
 
-/* Responsiveness */
 
-/* Pour les tablettes */
 @media (max-width: 768px) {
     .welcome-panel {
         padding: 2rem;
         min-height: 500px;
-        /* Réduction de la hauteur minimale */
     }
 
     .welcome-text {
         max-width: 80%;
-        /* Augmente la largeur pour améliorer la lisibilité */
     }
 
     .welcome-text h1 {
         font-size: 4.5rem;
-        /* Réduction de la taille du titre */
     }
 
     .welcome-text p {
         font-size: 1.4rem;
-        /* Réduction de la taille du texte */
         line-height: 1.4;
-        /* Ajustement de l'interligne */
     }
 
     .welcome-image {
         bottom: -300px;
-        /* Ajuste la position de l'image */
         height: 800px;
-        /* Réduction de la hauteur de l'image */
     }
 }
 
-/* Pour les téléphones */
 @media (max-width: 480px) {
     .welcome-panel {
         padding: 1.5rem;
         min-height: 400px;
-        /* Réduction supplémentaire de la hauteur */
     }
 
     .welcome-text h1 {
         font-size: 3.2rem;
-        /* Réduction supplémentaire de la taille du titre */
     }
 
     .welcome-text p {
         font-size: 1.2rem;
-        /* Réduction de la taille du texte */
         line-height: 1.3;
-        /* Ajustement de l'interligne */
         letter-spacing: 1.5px;
-        /* Réduction de l'espacement des lettres */
     }
 
     .welcome-image {
         bottom: -200px;
-        /* Ajuste davantage la position de l'image */
         height: 600px;
-        /* Réduction supplémentaire de la hauteur de l'image */
     }
 }
 </style>

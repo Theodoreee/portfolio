@@ -1,12 +1,10 @@
 <template>
     <footer class="footer">
         <div class="footer-container">
-            <!-- Nom à gauche -->
             <div class="footer-left">
                 <p>Cléo - Miniamaker</p>
             </div>
 
-            <!-- Liens réseaux sociaux et pages à droite -->
             <div class="footer-right">
                 <div class="social-links">
                     <h3>Réseaux sociaux</h3>
@@ -31,7 +29,6 @@
 export default {
     name: "FooterPanel_",
     methods: {
-        // Navigation vers les pages
         goToAccueil() {
             if (this.$route.name !== "HomeView") {
                 this.$router.push("/");
@@ -53,7 +50,6 @@ export default {
             }
         },
 
-        // Ouverture des réseaux sociaux
         goToInstagram() {
             open("https://www.instagram.com/cl3oyt/", "_blank");
         },
@@ -78,13 +74,11 @@ export default {
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    /* Permet aux éléments de passer à la ligne si nécessaire */
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     gap: 1.5rem;
-    /* Espacement entre les sections */
 }
 
 .footer-left p {
@@ -95,14 +89,10 @@ export default {
 .footer-right {
     display: flex;
     flex-wrap: wrap;
-    /* Les sections passent à la ligne sur petits écrans */
     justify-content: space-between;
     width: 100%;
-    /* Utilise toute la largeur sur petits écrans */
     max-width: 600px;
-    /* Limite la largeur sur écrans plus larges */
     gap: 2rem;
-    /* Ajoute un espacement entre les sections */
 }
 
 .social-links,
@@ -111,7 +101,6 @@ export default {
     gap: 1rem;
     flex-direction: column;
     align-items: flex-start;
-    /* Aligne le contenu à gauche */
 }
 
 .social-link,
@@ -134,50 +123,41 @@ export default {
     margin: 0 0 0.5rem 0;
 }
 
-/* Responsiveness */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        /* Les éléments s’empilent verticalement */
         align-items: center;
         text-align: center;
     }
 
     .footer-right {
         flex-direction: column;
-        /* Les sections s’empilent */
         align-items: center;
         width: 100%;
-        /* Utilise toute la largeur */
     }
 
     .social-links,
     .page-links {
         align-items: center;
-        /* Centre le contenu */
     }
 
     .footer-left p {
         text-align: center;
-        /* Centre le texte à gauche sur petits écrans */
     }
 }
 
 @media (max-width: 480px) {
     .footer {
         padding: 1rem 0.5rem;
-        /* Réduit le padding sur les très petits écrans */
     }
 
     .footer-left p {
         font-size: 1.4rem;
-        /* Réduit la taille du texte */
     }
 
     .social-link,
     .page-link {
         font-size: 0.9rem;
-        /* Réduit la taille des liens */
     }
 }
 </style>
