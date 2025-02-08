@@ -27,9 +27,9 @@ export default {
     data() {
         return {
             creations: [
-                { title: "Création 1", image: require("@/assets/combattant_ia-v6-min.png") },
-                { title: "Création 2", image: require("@/assets/aaron2-v2-min.png") },
-                { title: "Création 3", image: require("@/assets/activision2-final-min.png") },
+                { title: "Création 1", image: require("@/assets/podscast-v4-min.png") },
+                { title: "Création 2", image: require("@/assets/minecraft_livestream-v4-min.png") },
+                { title: "Création 3", image: require("@/assets/apple_vision-v6-min.png") },
                 { title: "Création 4", image: require("@/assets/formule-final-min.png") },
             ],
             dividerPosition: 0,
@@ -81,6 +81,16 @@ export default {
     overflow: hidden;
     border-radius: 20px;
 }
+
+img {
+    pointer-events: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 
 .image {
     position: absolute;
