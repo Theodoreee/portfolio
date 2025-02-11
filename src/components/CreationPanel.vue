@@ -50,7 +50,15 @@ export default {
             const rect = container.getBoundingClientRect();
             this.containerWidth = rect.width;
 
-            const mouseX = event.clientX - rect.left;
+            let mouseX;
+            if (event.touches) {
+                // Gestion du toucher sur mobile
+                mouseX = event.touches[0].clientX - rect.left;
+            } else {
+                // Gestion de la souris sur desktop
+                mouseX = event.clientX - rect.left;
+            }
+
             this.dividerPosition = Math.max(0, Math.min(mouseX, this.containerWidth));
         }
     },
@@ -58,7 +66,8 @@ export default {
         const container = this.$el.querySelector(".image-wrapper");
         this.containerWidth = container.offsetWidth;
         this.dividerPosition = this.containerWidth / 2;
-    },
+    }
+
 };
 </script>
 
@@ -74,14 +83,6 @@ export default {
     overflow: hidden;
 }
 
-.image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 440px;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
 img {
     pointer-events: none;
     user-drag: none;
@@ -91,6 +92,14 @@ img {
     -ms-user-select: none;
 }
 
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    /* Maintient le format 16:9 */
+    overflow: hidden;
+    border-radius: 20px;
+}
 
 .image {
     position: absolute;
@@ -113,6 +122,8 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: ew-resize;
     z-index: 10;
+    touch-action: none;
+    /* Permet le glissement fluide sur mobile */
 }
 
 .creations-panel {
@@ -216,7 +227,9 @@ img {
     }
 
     .image-wrapper {
-        height: 360px;
+        aspect-ratio: 16/9;
+        /* Assure la forme correcte */
+        height: auto;
     }
 
     .portfolio-button {
@@ -246,8 +259,11 @@ img {
     }
 
     .image-wrapper {
-        height: 300px;
+        aspect-ratio: 16/9;
+        /* Assure la forme correcte */
+        height: auto;
     }
+
 
     .portfolio-button {
         font-size: 1.6rem;
@@ -267,8 +283,11 @@ img {
     }
 
     .image-wrapper {
-        height: 240px;
+        aspect-ratio: 16/9;
+        /* Assure la forme correcte */
+        height: auto;
     }
+
 
     .portfolio-button {
         font-size: 1.4rem;

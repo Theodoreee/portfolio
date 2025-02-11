@@ -1,7 +1,5 @@
 <template>
     <div class="contact-options-panel">
-        <h2>Contactez-moi</h2>
-
         <section class="how-i-work-panel">
             <div class="panel-container">
                 <div class="content">
@@ -98,7 +96,10 @@ export default {
 .icon {
     width: 50px;
     height: 50px;
+    object-fit: contain;
+    /* Évite la déformation */
 }
+
 
 .how-i-work-panel {
     font-family: "blastered";
@@ -193,6 +194,7 @@ export default {
     .icon {
         width: 30px;
         height: 30px;
+        object-fit: contain;
     }
 
     .how-i-work-panel {
