@@ -6,6 +6,9 @@
                 <img :src="banner.image" :alt="banner.title" class="banner-image" />
             </div>
         </div>
+        <div class="button-container">
+            <button @click="goToContact" class="portfolio-button">CONTACT</button>
+        </div>
     </section>
 </template>
 
@@ -35,10 +38,11 @@ export default {
 
 /* Titre */
 .creations-title {
-    font-size: 3.8rem;
+    font-size: 2.8rem;
     letter-spacing: 6px;
     color: #E0B0FF;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.4em;
+    margin-top: -0.8em;
 }
 
 /* Conteneur des bannières */
@@ -72,6 +76,30 @@ export default {
     display: block;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.portfolio-button {
+    font-family: "blastered";
+    background-color: #E0B0FF;
+    color: #242124;
+    font-size: 2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1.3em;
+    margin-bottom: 1em;
+}
+
+.portfolio-button:hover {
+    background-color: #b590d0;
+    transform: scale(1.1);
 }
 
 /* Responsive */

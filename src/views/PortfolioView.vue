@@ -2,6 +2,7 @@
     <section class="portfolio">
         <AccueilPortfolioPanel />
         <PortfolioPanel />
+        <BannerPanel />
         <FooterPanel />
     </section>
 </template>
@@ -10,12 +11,14 @@
 import AccueilPortfolioPanel from '@/components/AccueilPortfolioPanel.vue';
 import PortfolioPanel from '@/components/PortfolioPanel.vue';
 import FooterPanel from "@/components/FooterPanel.vue";
+import BannerPanel from '@/components/BannerPanel.vue';
 
 export default {
     name: "PortfolioView",
     components: {
         AccueilPortfolioPanel,
         PortfolioPanel,
+        BannerPanel,
         FooterPanel,
     },
 };
