@@ -21,9 +21,6 @@
             </div>
         </div>
     </section>
-    <div class="button-container">
-        <button @click="goToContact" class="contact-button">CONTACT</button>
-    </div>
 </template>
 
 <script>
@@ -62,6 +59,7 @@ export default {
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     width: 90%;
+    margin-bottom: 4em;
 }
 
 .panel-container {
@@ -161,29 +159,6 @@ export default {
 
 .right-content li:last-child {
     margin-bottom: 0;
-}
-
-.button-container {
-    text-align: center;
-    margin-bottom: 4em;
-}
-
-.contact-button {
-    font-family: "blastered";
-    background-color: #E0B0FF;
-    color: #242124;
-    font-size: 2rem;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 2em;
-}
-
-.contact-button:hover {
-    background-color: #b590d0;
-    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
