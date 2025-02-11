@@ -12,6 +12,7 @@
 import WelcomePanel from "@/components/WelcomePanel.vue";
 import CreationPanel from "@/components/CreationPanel.vue";
 import HowIWorkPanel from "@/components/HowIWorkPanel.vue";
+// import BannerPanel from "@/components/BannerPanel.vue";
 import NichesPanel from "@/components/NichesPanel.vue";
 import FooterPanel from "@/components/FooterPanel.vue";
 
@@ -21,6 +22,7 @@ export default {
         WelcomePanel,
         CreationPanel,
         HowIWorkPanel,
+        // BannerPanel,
         NichesPanel,
         FooterPanel,
     },

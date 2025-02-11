@@ -67,7 +67,6 @@ export default {
         this.containerWidth = container.offsetWidth;
         this.dividerPosition = this.containerWidth / 2;
     }
-
 };
 </script>
 
@@ -227,9 +226,7 @@ img {
     }
 
     .image-wrapper {
-        aspect-ratio: 16/9;
-        /* Assure la forme correcte */
-        height: auto;
+        height: 360px;
     }
 
     .portfolio-button {
@@ -259,11 +256,8 @@ img {
     }
 
     .image-wrapper {
-        aspect-ratio: 16/9;
-        /* Assure la forme correcte */
-        height: auto;
+        height: 300px;
     }
-
 
     .portfolio-button {
         font-size: 1.6rem;
@@ -283,11 +277,8 @@ img {
     }
 
     .image-wrapper {
-        aspect-ratio: 16/9;
-        /* Assure la forme correcte */
-        height: auto;
+        height: 240px;
     }
-
 
     .portfolio-button {
         font-size: 1.4rem;
