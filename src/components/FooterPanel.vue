@@ -1,24 +1,33 @@
 <template>
     <footer class="footer">
         <div class="footer-container">
+            <!-- Section gauche : Copyright -->
             <div class="footer-left">
-                <p>Cléo - Miniamaker</p>
+                <p>© 2024 Cléo - Miniamaker</p>
             </div>
 
+            <!-- Section Navigation avec boutons -->
+            <div class="footer-nav">
+                <button @click="goToAccueil" class="nav-button">Accueil</button>
+                <button @click="goToPortfolio" class="nav-button">Portfolio</button>
+                <button @click="goToAvis" class="nav-button">Avis</button>
+                <button @click="goToContact" class="nav-button">Contact</button>
+            </div>
+
+            <!-- Section droite : Call-To-Action et Mentions légales -->
             <div class="footer-right">
-                <div class="social-links">
-                    <h3>Réseaux sociaux</h3>
-                    <span @click="goToInstagram" class="social-link">Instagram</span>
-                    <span @click="goToDiscord" class="social-link">Discord</span>
-                    <span @click="goToEmail" class="social-link">Email</span>
+                <div class="cta">
+                    <button @click="goToContact" class="footer-button">Travaillons ensemble !</button>
                 </div>
 
-                <div class="page-links">
-                    <h3>Pages</h3>
-                    <span @click="goToAccueil" class="page-link">Accueil</span>
-                    <span @click="goToPortfolio" class="page-link">Portfolio</span>
-                    <span @click="goToAvis" class="page-link">Avis</span>
-                    <span @click="goToContact" class="page-link">Contact</span>
+                <div class="availability">
+                    <h3>Disponibilité</h3>
+                    <p>Lundi - Vendredi : 7h - 21h</p>
+                    <p>Samedi - Dimanche : 7h - 21h</p>
+                </div>
+
+                <div class="legal">
+                    <a @click="goToMentionsLegales">Mentions Légales</a>
                 </div>
             </div>
         </div>
@@ -27,37 +36,25 @@
 
 <script>
 export default {
-    name: "FooterPanel_",
+    name: "FooterPanel",
     methods: {
         goToAccueil() {
-            if (this.$route.name !== "HomeView") {
-                this.$router.push("/");
-            }
+            if (this.$route.name !== "HomeView") this.$router.push("/");
         },
         goToPortfolio() {
-            if (this.$route.name !== "PortfolioView") {
-                this.$router.push("/portfolio");
-            }
+            if (this.$route.name !== "PortfolioView") this.$router.push("/portfolio");
         },
         goToAvis() {
-            if (this.$route.name !== "AvisView") {
-                this.$router.push("/avis");
-            }
+            if (this.$route.name !== "AvisView") this.$router.push("/avis");
         },
         goToContact() {
-            if (this.$route.name !== "ContactView") {
-                this.$router.push("/contact");
-            }
+            if (this.$route.name !== "ContactView") this.$router.push("/contact");
         },
-
-        goToInstagram() {
-            open("https://www.instagram.com/cl3oyt/", "_blank");
+        goToMentionsLegales() {
+            this.$router.push("/mentions-legales");
         },
-        goToDiscord() {
-            open("https://discord.gg/MMcCAuhTNg", "_blank");
-        },
-        goToEmail() {
-            open("mailto: cl3o.contact@gmail.com", "_blank");
+        goToPrivacyPolicy() {
+            this.$router.push("/politique-de-confidentialite");
         }
     }
 };
@@ -65,99 +62,160 @@ export default {
 
 <style scoped>
 .footer {
-    background-color: #000;
-    color: #fff;
+    background-color: #1a1a1a;
+    color: #bbb;
     padding: 2rem 1rem;
     font-family: "Arial", sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    flex-wrap: wrap;
+    max-width: 1100px;
     margin: 0 auto;
-    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* 🔹 Section Copyright */
+.footer-left {
+    flex: 1;
+    text-align: left;
 }
 
 .footer-left p {
-    font-size: 1.6rem;
     margin: 0;
+    font-size: 0.9rem;
+    color: #888;
 }
 
-.footer-right {
+/* 🔹 Section Navigation */
+.footer-nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 600px;
-    gap: 2rem;
+    gap: 10px;
+    margin-right: 3em;
 }
 
-.social-links,
-.page-links {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.social-link,
-.page-link {
-    font-size: 1rem;
-    color: #E0B0FF;
+.nav-button {
+    background-color: #2c2c2c;
+    color: #e0b0ff;
+    border: 1px solid #e0b0ff;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #e0b0ff;
+    color: #1a1a1a;
+}
+
+/* 🔹 Bouton Call-To-Action */
+.footer-button {
+    background-color: #e0b0ff;
+    color: #1a1a1a;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #b590d0;
+    transform: scale(1.05);
+}
+
+/* 🔹 Disponibilité */
+.availability {
+    margin-top: 1rem;
+}
+
+.availability h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #e0b0ff;
+}
+
+.availability p {
+    font-size: 0.85rem;
+    margin: 2px 0;
+    color: #bbb;
+}
+
+/* 🔹 Mentions Légales */
+.legal {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.legal a {
+    color: #bbb;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.social-link:hover,
-.page-link:hover {
-    color: #b590d0;
+.legal a:hover {
+    color: #e0b0ff;
 }
 
-.social-links h3,
-.page-links h3 {
-    font-size: 1.2rem;
-    margin: 0 0 0.5rem 0;
-}
-
-@media (max-width: 768px) {
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
     .footer-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
+    .footer-left {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .footer-nav {
+        margin: 1rem 0;
+    }
+
     .footer-right {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-    }
-
-    .social-links,
-    .page-links {
-        align-items: center;
-    }
-
-    .footer-left p {
-        text-align: center;
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .footer {
-        padding: 1rem 0.5rem;
+        padding: 1.5rem 1rem;
+        font-size: 0.8rem;
     }
 
-    .footer-left p {
-        font-size: 1.4rem;
+    .footer-nav {
+        flex-direction: column;
+        gap: 5px;
     }
 
-    .social-link,
-    .page-link {
+    .nav-button {
+        width: 100%;
+    }
+
+    .footer-button {
         font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .availability h3 {
+        font-size: 0.9rem;
+    }
+
+    .legal {
+        font-size: 0.8rem;
     }
 }
 </style>
