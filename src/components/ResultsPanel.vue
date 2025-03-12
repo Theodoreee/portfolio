@@ -51,7 +51,6 @@ export default {
     overflow: hidden;
 }
 
-
 .creations-title {
     text-transform: lowercase;
     font-size: 3.8rem;
@@ -59,7 +58,6 @@ export default {
     color: #E0B0FF;
     text-align: center;
 }
-
 
 .minia-title {
     font-size: 2.8rem;
@@ -97,5 +95,67 @@ export default {
     font-size: 3rem;
     margin-top: 0.5rem;
     color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 videos per row */
+    }
+
+    .youtube-video {
+        height: 220px;
+        /* Slightly smaller video */
+    }
+
+    .views-count {
+        font-size: 2.5rem;
+        /* Smaller text for views */
+    }
+}
+
+@media (max-width: 768px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+        /* 1 video per row on smaller screens */
+    }
+
+    .youtube-video {
+        height: 200px;
+        /* Even smaller video on mobile */
+    }
+
+    .views-count {
+        font-size: 2rem;
+        /* Even smaller text on mobile */
+    }
+
+    .creations-title {
+        font-size: 3rem;
+        /* Adjust main title size for mobile */
+    }
+
+    .minia-title {
+        font-size: 2.4rem;
+        /* Adjust subtitle size */
+    }
+}
+
+@media (max-width: 480px) {
+    .views-count {
+        font-size: 1.8rem;
+        /* Smaller views count for extra small screens */
+    }
+
+    .creations-title {
+        font-size: 2.5rem;
+        /* Adjust title size */
+    }
+
+    .minia-title {
+        font-size: 2rem;
+        /* Adjust subtitle size */
+    }
 }
 </style>

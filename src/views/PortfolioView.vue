@@ -138,4 +138,32 @@ export default {
     width: 90%;
     /* Effet subtil au survol */
 }
+
+@media (max-width: 768px) {
+    .portfolio-btn {
+        font-size: 1.6rem;
+        /* Réduit la taille de police */
+        padding: 0.8rem 1.5rem;
+        /* Réduit le padding */
+    }
+
+    .portfolio-nav {
+        gap: 1.5rem;
+        /* Moins d'écart entre les boutons */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-btn {
+        font-size: 1.4rem;
+        /* Encore plus petit sur très petit écran */
+        padding: 0.6rem 1rem;
+        /* Moins de padding pour plus d'espace */
+    }
+
+    .portfolio-nav {
+        gap: 1rem;
+        /* Réduit l'écart sur les petits écrans */
+    }
+}
 </style>

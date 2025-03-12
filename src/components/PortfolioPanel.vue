@@ -186,12 +186,12 @@ export default {
 
 @media (max-width: 768px) {
     .creations-panel {
-        padding: 2rem;
+        padding-bottom: 3rem;
     }
 
     .creations-title {
         font-size: 3rem;
-        letter-spacing: 4px;
+        letter-spacing: 6px;
     }
 
     .creations-grid {
@@ -212,12 +212,12 @@ export default {
 
 @media (max-width: 480px) {
     .creations-panel {
-        padding: 1.5rem;
+        padding-bottom: 3rem;
     }
 
     .creations-title {
         font-size: 2.5rem;
-        letter-spacing: 3px;
+        letter-spacing: 6px;
     }
 
     .creations-grid {

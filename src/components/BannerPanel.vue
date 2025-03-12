@@ -204,7 +204,7 @@ export default {
 
     .creations-title {
         font-size: 2.5rem;
-        letter-spacing: 3px;
+        letter-spacing: 6px;
     }
 }
 </style>
