@@ -155,9 +155,9 @@ export default {
 
 @media (max-width: 480px) {
     .portfolio-btn {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         /* Encore plus petit sur très petit écran */
-        padding: 0.6rem 1rem;
+        padding: 0.6rem 0.8rem;
         /* Moins de padding pour plus d'espace */
     }
 
