@@ -92,7 +92,7 @@ export default {
     font-family: "blastered";
     align-items: center;
     background-color: #242124;
-    padding: 3rem;
+    padding-bottom: 3em;
     color: #fff;
     min-height: 600px;
     position: relative;
@@ -109,7 +109,6 @@ export default {
     text-transform: lowercase;
     font-size: 3.8rem;
     letter-spacing: 6px;
-    margin-top: 1.4em;
     color: #E0B0FF;
     text-align: center;
 }

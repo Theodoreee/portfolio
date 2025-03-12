@@ -77,7 +77,7 @@ export default {
     font-family: "blastered";
     align-items: center;
     background-color: #242124;
-    padding: 3rem;
+    padding-bottom: 3rem;
     color: #fff;
     min-height: 600px;
     position: relative;
@@ -94,7 +94,6 @@ export default {
     text-transform: lowercase;
     font-size: 3.8rem;
     letter-spacing: 6px;
-    margin-top: 1.4em;
     color: #E0B0FF;
     text-align: center;
 }
@@ -108,24 +107,48 @@ export default {
 }
 
 .creations-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Deux colonnes */
+    gap: 2rem;
+    /* Espacement entre les cartes */
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .creation-card {
     width: 100%;
-    max-width: 700px;
+    max-width: 100%;
+    /* Empêche les bannières de s'étirer */
     background-color: transparent;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.creation-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .creations-grid {
+        grid-template-columns: 1fr;
+        /* Une colonne sur petits écrans */
+    }
+}
+
 
 .creation-card.fade-in {
     opacity: 1;

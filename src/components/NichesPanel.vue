@@ -95,7 +95,7 @@ export default {
     align-items: center;
     width: 140px;
     height: 140px;
-    background: linear-gradient(135deg, #6a3093, #a044ff);
+    background: linear-gradient(135deg, #c979ff, #E0B0FF);
     border-radius: 50%;
     color: #fff;
     font-weight: bold;
