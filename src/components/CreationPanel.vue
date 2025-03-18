@@ -29,8 +29,8 @@ export default {
             creations: [
                 { title: "Création 1", image: require("@/assets/podscast-v4-min.png") },
                 { title: "Création 2", image: require("@/assets/minecraft_livestream-v4-min.png") },
-                { title: "Création 3", image: require("@/assets/apple_vision-v6-min.png") },
-                { title: "Création 4", image: require("@/assets/remy_3-v6-min.png") },
+                { title: "Création 3", image: require("@/assets/ilona_makingof-v5-min.png") },
+                { title: "Création 4", image: require("@/assets/donald_trump_europe-v1-min.png") },
             ],
             dividerPosition: 0,
             containerWidth: 0,
