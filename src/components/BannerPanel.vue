@@ -19,7 +19,9 @@ export default {
         return {
             banners: [
                 { title: "Bannière 1", image: require("@/assets/banner_badis-v5-min.jpg") },
-                { title: "Bannière 2", image: require("@/assets/banner_remy_3-v7-min.jpg") }
+                { title: "Bannière 2", image: require("@/assets/banner_remy_3-v7-min.jpg") },
+                { title: "Bannière 3", image: require("@/assets/banner_dono-v1-min.jpg") },
+                { title: "Bannière 4", image: require("@/assets/banner_tore-v9-min.jpg") }
             ],
             isVisible: []
         };
