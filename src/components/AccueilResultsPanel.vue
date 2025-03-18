@@ -1,20 +1,19 @@
 <template>
     <section class="avis-panel">
         <div class="content-container">
-            <h1>avis clients</h1>
+            <h1>résultats clients</h1>
             <p>
-                Découvrez les avis de certains de mes clients. Tout les avis sont vérifiés et vérifiables !
+                Découvrez ici les résultats qu'on pu faire certain de mes clients !
             </p>
         </div>
         <div class="avis-image">
-            <!-- L'image est ajoutée ici en tant que background -->
         </div>
     </section>
 </template>
 
 <script>
 export default {
-    name: "AvisPanel",
+    name: "ResultsPanel",
 };
 </script>
 

@@ -13,8 +13,8 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/avis" class="nav-link" :class="{ active: $route.name === 'AvisView' }">
-                        AVIS CLIENTS
+                    <router-link to="/avis" class="nav-link" :class="{ active: $route.name === 'ResultView' }">
+                        RÉSULTATS
                     </router-link>
                 </li>
                 <li class="nav-item">

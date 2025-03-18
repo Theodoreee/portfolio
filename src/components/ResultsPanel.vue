@@ -1,7 +1,6 @@
 <template>
     <section class="results-panel">
-        <h2 class="creations-title">MES CRÉATIONS</h2>
-        <h3 class="minia-title">RÉSULTATS CLIENTS</h3>
+        <h3 class="title">RÉSULTATS CLIENTS</h3>
         <div class="results-grid">
             <div class="result-card" v-for="(result, index) in results" :key="index">
                 <iframe class="youtube-video" :src="result.videoUrl" frameborder="0" allowfullscreen>
@@ -26,7 +25,7 @@ export default {
                 { videoUrl: "https://www.youtube.com/embed/Do7F75pocMk", views: "51 000" },
                 { videoUrl: "https://www.youtube.com/embed/fa4QrbXlsi0", views: "148 000" },
                 { videoUrl: "https://www.youtube.com/embed/VZhhVNe6G5g", views: "24 000" },
-                { videoUrl: "https://www.youtube.com/embed/6-xazmcTrZ8", views: "55 000" },
+                { videoUrl: "https://www.youtube.com/embed/6-xazmcTrZ8", views: "77 000" },
             ]
         };
     }
@@ -51,18 +50,10 @@ export default {
     overflow: hidden;
 }
 
-.creations-title {
+.title {
     text-transform: lowercase;
     font-size: 3.8rem;
     letter-spacing: 6px;
-    color: #E0B0FF;
-    text-align: center;
-}
-
-.minia-title {
-    font-size: 2.8rem;
-    letter-spacing: 6px;
-    margin-bottom: 1.4em;
     color: #E0B0FF;
     text-align: center;
 }

@@ -1,28 +1,28 @@
 <template>
-    <section class="avis">
-        <AccueilAvisPanel />
-        <AvisClientsPanel />
+    <section class="res">
+        <AccueilResultsPanel />
+        <ResultsPanel />
         <FooterPanel />
     </section>
 </template>
 
 <script>
-import AccueilAvisPanel from '@/components/AccueilAvisPanel.vue';
-import AvisClientsPanel from '@/components/AvisClientsPanel.vue';
+import AccueilResultsPanel from '@/components/AccueilResultsPanel.vue';
+import ResultsPanel from '@/components/ResultsPanel.vue';
 import FooterPanel from '@/components/FooterPanel.vue';
 
 export default {
     name: "ServicesView",
     components: {
-        AccueilAvisPanel,
-        AvisClientsPanel,
+        AccueilResultsPanel,
+        ResultsPanel,
         FooterPanel
     },
 };
 </script>
 
 <style scoped>
-.avis {
+.res {
     display: flex;
     flex-direction: column;
     min-height: 100%;

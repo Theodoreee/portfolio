@@ -11,16 +11,15 @@
                 @click="selectedTab = 'bannieres'">
                 Bannières
             </button>
-            <button class="portfolio-btn" :class="{ active: selectedTab === 'resultats' }"
-                @click="selectedTab = 'resultats'">
-                Résultats
+            <button class="portfolio-btn" :class="{ active: selectedTab === 'autres' }" @click="selectedTab = 'autres'">
+                Autres
             </button>
         </div>
 
         <div class="portfolio-content">
             <PortfolioPanel v-if="selectedTab === 'miniatures'" />
             <BannerPanel v-if="selectedTab === 'bannieres'" />
-            <ResultsPanel v-if="selectedTab === 'resultats'" />
+            <OtherPanel v-if="selectedTab === 'autres'" />
 
         </div>
 
@@ -32,7 +31,7 @@
 import AccueilPortfolioPanel from '@/components/AccueilPortfolioPanel.vue';
 import PortfolioPanel from '@/components/PortfolioPanel.vue';
 import BannerPanel from '@/components/BannerPanel.vue';
-import ResultsPanel from '@/components/ResultsPanel.vue';
+import OtherPanel from '@/components/OtherPanel.vue';
 import FooterPanel from '@/components/FooterPanel.vue';
 
 export default {
@@ -41,7 +40,7 @@ export default {
         AccueilPortfolioPanel,
         PortfolioPanel,
         BannerPanel,
-        ResultsPanel,
+        OtherPanel,
         FooterPanel,
     },
     data() {
