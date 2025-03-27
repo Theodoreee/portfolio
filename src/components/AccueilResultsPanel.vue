@@ -63,16 +63,16 @@ export default {
 
 .avis-image {
     position: absolute;
-    bottom: -100px;
+    bottom: -200px;
     left: 0;
     width: 100%;
-    height: 1000px;
-    background-image: url("../../public/sunset.gif");
+    height: 800px;
+    background-image: url("../../public/banner_cleo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
     z-index: 2;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 @media (max-width: 768px) {

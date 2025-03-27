@@ -12,7 +12,7 @@
                 Bannières
             </button>
             <button class="portfolio-btn" :class="{ active: selectedTab === 'autres' }" @click="selectedTab = 'autres'">
-                Autres
+                Création DA
             </button>
         </div>
 

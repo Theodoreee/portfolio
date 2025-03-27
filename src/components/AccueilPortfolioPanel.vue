@@ -64,16 +64,16 @@ export default {
 
 .portfolio-image {
     position: absolute;
-    bottom: 0;
+    bottom: -200px;
     left: 0;
     width: 100%;
     height: 800px;
-    background-image: url("../../public/mario.gif");
+    background-image: url("../../public/banner_cleo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
     z-index: 2;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 @media (max-width: 768px) {

@@ -45,29 +45,33 @@ export default {
 }
 
 .welcome-text h1 {
-    font-size: 6rem;
+    text-align: center;
+    font-size: 5rem;
     margin-bottom: 1rem;
 }
 
 .welcome-text p {
-    font-size: 1.6rem;
-    line-height: 1.5;
+    text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 2rem;
+    color: #e0b0ff;
+    line-height: 1.6;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .welcome-image {
     position: absolute;
-    bottom: -400px;
+    bottom: -200px;
     left: 0;
     width: 100%;
-    height: 1000px;
-    background-image: url("../../public/moon.gif");
+    height: 800px;
+    background-image: url("../../public/banner_cleo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
     z-index: 2;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 
