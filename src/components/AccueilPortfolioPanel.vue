@@ -72,7 +72,7 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
-    z-index: 2;
+    z-index: 4;
     opacity: 0.4;
 }
 
@@ -95,7 +95,7 @@ export default {
     }
 
     .portfolio-image {
-        height: 600px;
+        height: 800px;
     }
 }
 
@@ -114,7 +114,7 @@ export default {
     }
 
     .portfolio-image {
-        height: 400px;
+        height: 600px;
     }
 }
 </style>
