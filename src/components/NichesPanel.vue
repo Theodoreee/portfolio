@@ -30,6 +30,11 @@
 <script>
 export default {
     name: "NichesPage",
+    methods: {
+        goToContact() {
+            this.$router.push("/contact");
+        },
+    }
 };
 </script>
 
