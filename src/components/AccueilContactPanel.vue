@@ -72,7 +72,7 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
-    z-index: 4;
+    z-index: 1;
     opacity: 0.4;
 }
 
