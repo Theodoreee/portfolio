@@ -27,10 +27,10 @@ export default {
     data() {
         return {
             creations: [
-                { title: "Création 1", image: require("@/assets/podscast-v4-min.png") },
-                { title: "Création 2", image: require("@/assets/minecraft_livestream-v4-min.png") },
-                { title: "Création 3", image: require("@/assets/ilona_makingof-v5-min.png") },
-                { title: "Création 4", image: require("@/assets/donald_trump_europe-v1-min.png") },
+                { title: "Création 1", image: require("@/assets/ilona_prod-v4-min.png") },
+                { title: "Création 2", image: require("@/assets/keonii_crouton-v17-min.png") },
+                { title: "Création 3", image: require("@/assets/eren_anta-v7-min.png") },
+                { title: "Création 4", image: require("@/assets/lyvai_vsl-v6-min.png") },
             ],
             dividerPosition: 0,
             containerWidth: 0,

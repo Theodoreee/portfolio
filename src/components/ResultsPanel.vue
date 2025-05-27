@@ -19,6 +19,7 @@ export default {
             results: [
                 { videoUrl: "https://www.youtube.com/embed/GEFETK2g7xY", views: "175 000" },
                 { videoUrl: "https://www.youtube.com/embed/_CiwpCcPtPg", views: "33 000" },
+                { videoUrl: "https://www.youtube.com/embed/rrDvRekzOsM", views: "21 000" },
                 { videoUrl: "https://www.youtube.com/embed/k_vYxsSPQMs", views: "238 000" },
                 { videoUrl: "https://www.youtube.com/embed/KVhPlxs4Nmg", views: "11 000" },
                 { videoUrl: "https://www.youtube.com/embed/d1BCri2fVDs", views: "105 000" },
@@ -26,6 +27,7 @@ export default {
                 { videoUrl: "https://www.youtube.com/embed/fa4QrbXlsi0", views: "140 000" },
                 { videoUrl: "https://www.youtube.com/embed/VZhhVNe6G5g", views: "24 000" },
                 { videoUrl: "https://www.youtube.com/embed/6-xazmcTrZ8", views: "172 000" },
+                { videoUrl: "https://www.youtube.com/embed/rU7893vyCew", views: "21 000" },
             ]
         };
     }
